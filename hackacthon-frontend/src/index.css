@@ -1,13 +1,97 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.map-container {
+  height: 100vh;
 }
+
+.sidebar {
+  background-color: rgb(35 55 75 / 90%);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  border-radius: 4px;
+}
+.marker {
+  background-color: rgba(70, 73, 176,0.4);
+  border: 1px solid blue;
+  color: white;
+  padding: 0.6vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /* font-size: 16px; */
+  margin: 4px 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.popup{
+  /* z-index: 30; */
+  min-width: 180px;
+  max-width: 180px;
+  min-height:200px;
+  max-height:200px;
+  background-color: rgba(210, 210, 210,1);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px black;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-radius: 4px;
+}
+.tile-header {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+.tile-header-item{
+  padding: 5px 10px;
+  font-family:  sans-serif;
+  /* font-size:11px; */
+  
+  max-width: 60%;
+  max-height: 70px;
+  min-height: 70px;
+  overflow: hidden;
+  text-decoration: dotted;
+  text-overflow: ellipsis;
+}
+.title{
+  display: flex;
+  font-size:11px;
+  font-weight: 600;
+  /* flex-wrap: wrap; */
+  text-overflow: ellipsis;
+}
+.tile-content{
+  padding: 2px 10px;
+  height: 100%;
+}
+.amenities-tile {
+  display: flex;
+  justify-content: space-between;
+
+}
+.cancel-container{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+
+.cancel{  
+    padding: 5px;
+    background-color: black;
+    padding: 2px 4px;
+    border-radius: 50%
+  }
