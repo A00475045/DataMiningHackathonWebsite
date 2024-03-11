@@ -21,24 +21,52 @@
   border-radius: 4px;
 }
 .marker {
-  background-color: rgba(70, 73, 176,0.4);
-  border: 1px solid blue;
+  background-image: url('../public/home-button.png');
+  background-size: cover; /* or 'contain', depending on your needs */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Other styles */
+  border: none;
   color: white;
-  padding: 0.6vw;
+  padding: 1.2vw;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  /* font-size: 16px; */
   margin: 4px 2px;
   border-radius: 50%;
   cursor: pointer;
+  position: relative;
 }
+
+.marker::after {
+  content: attr(titlea);
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.marker:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 .popup{
   /* z-index: 30; */
-  min-width: 180px;
-  max-width: 180px;
-  min-height:200px;
-  max-height:200px;
+  min-width: 400px;
+  max-width: 400px;
+  min-height:240px;
+  max-height:240px;
   background-color: rgba(210, 210, 210,1);
   cursor: pointer;
   box-shadow: 0px 0px 10px black;
