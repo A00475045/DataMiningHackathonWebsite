@@ -19,6 +19,7 @@
   left: 0;
   margin: 12px;
   border-radius: 4px;
+
 }
 .marker {
   background-image: url('../public/home-button.png');
@@ -65,8 +66,8 @@
   /* z-index: 30; */
   min-width: 400px;
   max-width: 400px;
-  min-height:240px;
-  max-height:240px;
+  min-height:310px;
+  /* max-height:240px; */
   background-color: rgba(210, 210, 210,1);
   cursor: pointer;
   box-shadow: 0px 0px 10px black;
@@ -79,22 +80,56 @@
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 .tile-header-item{
   padding: 5px 10px;
   font-family:  sans-serif;
   /* font-size:11px; */
   
-  max-width: 60%;
-  max-height: 70px;
-  min-height: 70px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* max-width: 60%; */
+  /* max-height: 60px; */
+  min-height: 60px;
+  width: 95%;
+  /* overflow: hidden; */
   text-decoration: dotted;
   text-overflow: ellipsis;
 }
+.idk{
+  display: flex;
+  justify-content: space-around;
+  font-size: 10px;
+  font-weight: 300;
+}
+.tile-content-nav{
+  display: flex;
+  margin: 0;
+  font-size: 10px;
+  /* flex-direction: column; */
+}
+.abc{
+  font-size: 10px; 
+  width: '100%'; 
+  background-color: 'white';
+}
+
+.content-nav-tab{
+  width: 25%;
+  display: block;
+  text-align: center;
+  margin: 0;
+  background-color: aliceblue;
+  border-right: 1px solid black;
+}
+
+.content-nav-tab:last-child{
+  border-right: none;
+}
+
 .title{
   display: flex;
   font-size:11px;
@@ -103,13 +138,17 @@
   text-overflow: ellipsis;
 }
 .tile-content{
-  padding: 2px 10px;
+  /* padding: 0px 2px; */
   height: 100%;
 }
 .amenities-tile {
   display: flex;
   justify-content: space-between;
 
+}
+.active{
+  background-color: rgba(161, 161, 253, 0.7);
+  /* color: #fff; */
 }
 .cancel-container{
     display: flex;
@@ -119,7 +158,8 @@
 
 .cancel{  
     padding: 5px;
-    background-color: black;
+    /* background-color: black; */
     padding: 2px 4px;
-    border-radius: 50%
+    border-radius: 50%;
+    height: fit-content;
   }
